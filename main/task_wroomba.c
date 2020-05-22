@@ -110,7 +110,7 @@ void vATaskWroomba(void *pvParameters) {
 
 
       EventBits_t eventGroupBits = xEventGroupGetBits(xCleanEventGroup);
-      if (eventGroupBits & (BIT_START_CLEAN == BIT_START_CLEAN)) {
+      if ((eventGroupBits & BIT_START_CLEAN) == BIT_START_CLEAN) {
         taskState = WROOMBA_TASK_START;
         ESP_LOGI(TAG, "Sending Command: Start Cleaning!");
         sendRoombaCommand(ROOMBA_COMMAND_START);
@@ -118,7 +118,7 @@ void vATaskWroomba(void *pvParameters) {
         sendRoombaCommand(ROOMBA_COMMAND_CLEAN);
       }
 
-      if (eventGroupBits & (BIT_STOP_CLEAN == BIT_STOP_CLEAN)) {
+      if ((eventGroupBits & BIT_STOP_CLEAN) == BIT_STOP_CLEAN) {
         taskState = WROOMBA_TASK_STOP;
         ESP_LOGI(TAG, "Sending Command: Stop Cleaning!");
         sendRoombaCommand(ROOMBA_COMMAND_START);
