@@ -10,7 +10,7 @@ Other than that, you will need:
 - A little circuit to get 3.3V from roomba's ~20V battery
 
 ### Software
-The software is a standard ESP32 project for use with the ESP-IDF v4.0.1. It's forked from cbrx's great original project which uses the old, pre-CMAKE esp-idf. 
+The software is a standard ESP32 project for use with the ESP-IDF v4.0.1. It's forked from cybrox's great original project which uses the old, pre-CMAKE esp-idf. 
 
 ### Usage
 Since for my application, the actual scheduling of tasks is done on a central device. Wroomba merely needs to add an API between that scheduler and the Roomba Open Interface. This Software exposes a very simple HTTP API with the following endpoints:
