@@ -10,11 +10,11 @@ menu "Wifi SSID and PSK"
     string "Wifi PSK"
     default "YourPSK"
     help
-      PSK of t he wifi network you want to use
+      PSK of the wifi network you want to use
 
     config USER_HOSTNAME
       string "Hostname"
       default "Roomba"
       help
-          PSK of t he wifi network you want to use
+          Hostname of the roomba
 endmenu
