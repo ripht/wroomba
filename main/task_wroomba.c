@@ -70,12 +70,12 @@ void vATaskWroomba(void *pvParameters) {
     } else {
       ESP_LOGI(TAG, "Module started successfully!");
     }
-    
+
 
     // Set up mDNS broadcasting
-    ESP_ERROR_CHECK(mdns_init(TCPIP_ADAPTER_IF_STA, &mdns));
-    mdns_set_hostname(mdns, "wroomba");
-    mdns_set_instance(mdns, "wroomba");
+    // ESP_ERROR_CHECK(mdns_init(TCPIP_ADAPTER_IF_STA, &mdns));
+    // mdns_set_hostname(mdns, "wroomba");
+    // mdns_set_instance(mdns, "wroomba");
 
 
     // Set up UART transmission and receiving pins
@@ -110,7 +110,7 @@ void vATaskWroomba(void *pvParameters) {
 
 
       EventBits_t eventGroupBits = xEventGroupGetBits(xCleanEventGroup);
-      if ((eventGroupBits & BIT_START_CLEAN) == 1) {
+      if (eventGroupBits & (BIT_START_CLEAN == BIT_START_CLEAN)) {
         taskState = WROOMBA_TASK_START;
         ESP_LOGI(TAG, "Sending Command: Start Cleaning!");
         sendRoombaCommand(ROOMBA_COMMAND_START);
@@ -118,7 +118,7 @@ void vATaskWroomba(void *pvParameters) {
         sendRoombaCommand(ROOMBA_COMMAND_CLEAN);
       }
 
-      if ((eventGroupBits & BIT_STOP_CLEAN) == 1) {
+      if (eventGroupBits & (BIT_STOP_CLEAN == BIT_STOP_CLEAN)) {
         taskState = WROOMBA_TASK_STOP;
         ESP_LOGI(TAG, "Sending Command: Stop Cleaning!");
         sendRoombaCommand(ROOMBA_COMMAND_START);

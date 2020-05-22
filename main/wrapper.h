@@ -30,7 +30,7 @@
 
   #define MILLISECONDS(ms) (ms / portTICK_PERIOD_MS)
   #define SECONDS(s) (MILLISECONDS(s * 1000))
-  
+
   #define CLEAR_BITS_TRUE      true
   #define CLEAR_BITS_FALSE     false
 
@@ -40,13 +40,13 @@
   #define BIT_READY            0x01
   #define BIT_CONNECTED        0x02
   #define BIT_DISCONNECTED     0x04
-  
+
   #define BIT_START_CLEAN      0x01
   #define BIT_STOP_CLEAN       0x02
 
-  
+
   // System Globals
-  mdns_server_t *mdns;
+//  mdns_server_t *mdns;
 
 
   // System Tasks
