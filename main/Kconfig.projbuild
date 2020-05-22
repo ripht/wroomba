@@ -12,4 +12,9 @@ menu "Wifi SSID and PSK"
     help
       PSK of t he wifi network you want to use
 
+    config USER_HOSTNAME
+      string "Hostname"
+      default "Roomba"
+      help
+          PSK of t he wifi network you want to use
 endmenu
