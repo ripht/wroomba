@@ -3,7 +3,7 @@ iRobot Roombas are great for cleaning. - But pretty damn expensive. Especially t
 Maybe this will go further...
 
 ### Hardware
-The project hardware is dead simple. Roomba exposes an open interface at the top (Roomba Open Interface) which is a 7-pin Mini-DIN pug. (If you're like me and don't have those lying around, you can also use a 6-PS2 plug, since the roomba interface has 2 Vpp and 2 GND lines one of which is conveniently placed where the PS2 plug has a missing pin).
+The project hardware is dead simple. Roomba exposes an open interface at the top (Roomba Open Interface) which is a 7-pin Mini-DIN pug. (If you're like me and don't have those lying around, you can also use a 6-PS2 plug, since the roomba interface has 2 Vpp and 2 GND lines one of which is conveniently placed where the PS2 plug has a missing pin). Or if you are feeling adventurous, screw the thing apart and solder the wires directly to the print, that way the cover can be reinstalled and it will look bone stock.
 
 Other than that, you will need:
 - An Espressif ESP32 development board
