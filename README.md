@@ -16,7 +16,7 @@ Since for my application, the actual scheduling of tasks is done on a central de
 - `GET /info` Returns "wroomba!"
 - `POST /clean` Sends `start` + `clean` command to roomba
 
-If you want to use this, please remember to set your wifi SSID and password during the menuconfig step under "Wifi SSID and PSK".
+If you want to use this, please remember to set your hostname, wifi SSID and password during the menuconfig step under "Wifi SSID and PSK".
 
 ### Future updates
 I'm intending to add a POST method to send a play command plus a song and a GET /dock to send it back to the dock.
