@@ -1,2 +1,3 @@
-# Ignore SDK files
+sdkconfig
+sdkconfig.old
 build/

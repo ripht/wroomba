@@ -1,0 +1,15 @@
+menu "Wifi SSID and PSK"
+
+  config WIFI_SSID_USER
+    string "Wifi SSID"
+    default "YourSSID"
+    help
+      SSID of the wifi network you want to use
+
+  config WIFI_PSK_USER
+    string "Wifi PSK"
+    default "YourPSK"
+    help
+      PSK of t he wifi network you want to use
+
+endmenu
