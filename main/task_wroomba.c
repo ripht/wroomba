@@ -73,9 +73,9 @@ void vATaskWroomba(void *pvParameters) {
 
 
     // Set up mDNS broadcasting
-    // ESP_ERROR_CHECK(mdns_init(TCPIP_ADAPTER_IF_STA, &mdns));
-    // mdns_set_hostname(mdns, "wroomba");
-    // mdns_set_instance(mdns, "wroomba");
+    ESP_ERROR_CHECK(mdns_init());
+    mdns_hostname_set("wroomba");
+    mdns_instance_name_set("wroomba");
 
 
     // Set up UART transmission and receiving pins
