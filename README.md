@@ -17,4 +17,4 @@ Since for my application, the actual scheduling of tasks is done on a central de
 - `GET /info` Returns "wroomba!"
 - `POST /clean` Sends `start` + `clean` command to roomba
 
-If you want to use this, please remember to change the WiFi login credentials in `secret/wifi.h`
+If you want to use this, please remember to set your wifi SSID and password durin the menuconfig step under "Wifi SSID and PSK". 
